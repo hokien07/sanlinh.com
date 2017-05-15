@@ -6,40 +6,44 @@ Author: hokien07
 Author URI: hokien07.com
 Version: 1
 */
-
-
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 * {
     margin: 0;
     padding: 0;
 }
+
 img {
     max-width: 100%;
     width: auto;
     height: auto;
 }
+
 h1 {
-    font-size: 200% ;
+    font-size: 200%;
     font-weight: 700;
     font-family: Arial, sans-serif;
 }
+
 h3 {
     font-size: 180%;
     font-weight: 500;
     font-family: Arial, sans-serif;
 }
+
 h4 {
     font-family: sans-serif, Arial;
     font-size: 150%;
     font-weight: 400;
     color: red;
 }
+
 body {
     width: 100%;
     margin: 0 auto;
     background-color: #ECF0F5;
 }
+
 p#breadcrumbs {
     margin-top: 138px;
     display: block;
@@ -62,10 +66,12 @@ header {
     left: 0px;
     z-index: 2000;
 }
+
 #inner-header {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 #logo {
     width: 249px;
     height: 76px;
@@ -74,9 +80,10 @@ header {
     margin-top: 12px;
     margin-left: 30px;
 }
+
 #menu-icon {
     width: 40px;
-    height:40px;
+    height: 40px;
     background: url('images/nav.png') center no-repeat;
     display: none;
 }
@@ -87,12 +94,14 @@ nav {
     line-height: 100px;
     padding-left: 15px;
 }
+
 nav ul {
     list-style-type: none;
     width: 100%;
     float: right;
     position: relative;
 }
+
 nav ul li {
     display: inline-block;
     padding-left: 10px;
@@ -100,38 +109,63 @@ nav ul li {
     font-size: 110%;
     font-family: Arial, sans-serif;
 }
-nav ul li a{
+
+nav ul li a {
     text-transform: uppercase;
     text-decoration: none;
     color: #ffffff;
 }
-nav ul li a:hover{
+
+nav ul li a:hover {
     color: #00C1DA;
 }
-nav h3{
+
+nav h3 {
     display: none;
 }
+
 /*slider*/
 @keyframes slidy {
-    0% { left: 0%; }
-    20% { left: 0%; }
-    25% { left: -100%; }
-    45% { left: -100%; }
-    50% { left: -200%; }
-    70% { left: -200%; }
-    75% { left: -300%; }
-    95% { left: -300%; }
-    100% { left: -400%; }
+    0% {
+        left: 0%;
+    }
+    20% {
+        left: 0%;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    95% {
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
 }
+
 div#slider {
     overflow: hidden;
     margin-top: 101px;
 }
+
 div#slider figure img {
     width: 20%;
     height: 500px;
     float: left;
 }
+
 div#slider figure {
     position: relative;
     width: 500%;
@@ -142,28 +176,32 @@ div#slider figure {
     animation: 30s slidy infinite;
 }
 
-
 /*start content*/
 .content {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .title {
     width: 100%;
     border-bottom: 3px solid #003C71;
 }
+
 .inner-title {
     display: inline-block;
     width: 100%;
     height: 40px;
     line-height: 53px;
 }
+
 .inner-title h1 {
     float: left;
     color: #003C71;
     text-transform: uppercase;
     margin-bottom: 5px;
+    margin-left: 20px;
 }
+
 .inner-title a {
     float: right;
     text-decoration: none;
@@ -176,84 +214,98 @@ div#slider figure {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .title_1 {
     width: 100%;
     border-bottom: 3px solid #003C71;
 }
+
 .inner_title_1 {
     display: inline-block;
     width: 100%;
     height: 40px;
     line-height: 53px;
 }
+
 .inner_title_1 h1 {
     float: left;
     color: #003C71;
     text-transform: uppercase;
     margin-bottom: 5px;
 }
+
 .inner_title_1 a {
     float: right;
     text-decoration: none;
     font-family: Arial, sans-serif;
     padding-right: 1%;
 }
+
 /* start post*/
 .post {
     width: 100%;
     margin: 22px auto;
 }
+
 .product {
     width: 30%;
     float: left;
     margin: 12px;
     background-color: #ffffff;
     border: 2px solid #ECF0F5;
+    position: relative;
+}
+
+.product .chi_tiet {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform:  translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }
 .product img {
     width: 370px;
     height: 234px;
+
 }
-.product h3{
+.product:hover img {
+    opacity: 0.1;
+}
+.product:hover .chi_tiet {
+    opacity: 1;
+}
+.product .chi_tiet .text a{
+    background-color: #4caf50;
+    color: #ffffff;
+    font-size: 120%;
+    text-decoration: none;
+    padding: 16px 32px;
+}
+
+.product h3 {
     text-align: left;
     color: #003C71;
     font-family: Arial, sans-serif;
     margin-top: 5px;
 }
+
 .product p {
     width: 100%;
     margin: 5px;
     margin-top: 15px;
 }
+
 .product h4 {
     margin: 15px 0px 0px 5px;
-}
-.order-button {
-    display: block;
-    text-align: center;
-    font-size: 150%;
-    font-weight: 500;
-    font-family: Arial, sans-serif;
-    text-decoration: none;
-    margin-top: 12px;
-    border: 2px solid #003C71;
-    border-radius: 20px;
-    margin-left: 20%;
-    margin-right: 20%;
-    background-color: #73C2F5;
-}
-.order-button:hover {
-    background-color: #9C0000;
-    color: #ffffff;
-}
-.product:hover {
-    background-color: #DAE8F5;
 }
 .content_1 {
     clear: both;
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .product-footer {
     width: 30%;
     float: left;
@@ -262,10 +314,12 @@ div#slider figure {
     position: relative;
 
 }
+
 .product-footer img {
     width: 369px;
     height: 505px;
 }
+
 .product-footer h3 {
     width: 100%;
     position: absolute;
@@ -276,15 +330,18 @@ div#slider figure {
     bottom: 0;
     left: 0;
 }
+
 .product-footer-2 {
     width: 60%;
     float: left;
     margin-top: 22px;
 }
-.product_1, .product_1 img{
+
+.product_1, .product_1 img {
     width: 368px;
     height: 235px;
 }
+
 .product_1 {
     width: 45%;
     display: inline-block;
@@ -316,14 +373,17 @@ body.single header {
     left: 0;
     z-index: 2000;
 }
+
 body.single {
     max-width: 1200px;
     margin: 200px auto;
 }
+
 body.single aside {
     width: 20%;
     float: left;
 }
+
 body.single .post {
     width: 75%;
     float: left;
@@ -331,6 +391,7 @@ body.single .post {
     padding: 2%;
     margin-left: 10px;
 }
+
 .entry h2 {
     font-size: 230%;
     text-align: center;
@@ -345,6 +406,7 @@ body.single .post {
     border-radius: 20px;
     margin-top: 24px;
 }
+
 .text-sidebar h3 {
     text-align: center;
     text-transform: uppercase;
@@ -371,18 +433,22 @@ section.chitiet-sanpham {
     margin-top: 15px;
     background-color: #ffffff;
 }
+
 .product-thumb {
     width: 35%;
     float: left;
 }
+
 .product-info {
     width: 60%;
     float: left;
 }
+
 .post-info {
     clear: both;
     width: 75%;
 }
+
 .product-info h3 {
     text-align: left;
     color: #003C71;
@@ -390,18 +456,21 @@ section.chitiet-sanpham {
     margin-top: 5px;
 }
 
-.product-status, body.single-product .product-kichthuoc, body.single-product .product-sotam, body.single-product .product-dientich {
+.product-status, body.single-product .product-kichthuoc, body.single-product .product-sotam, body.single-product .product-dientich, body.single-product .product-xuat-xu, body.single-product .product-ma-san-pham {
     color: #02B0ED;
     font-size: 120%;
     margin-top: 8px;
 }
+
 .product-price {
     margin-top: 12px;
 }
+
 .product-description {
     margin-top: 12px;
     font-size: 130%;
 }
+
 .order-button-single {
     clear: both;
     display: block;
@@ -417,26 +486,45 @@ section.chitiet-sanpham {
     width: 100px;
     background-color: #73C2F5;
 }
+
 .order-button-single:hover {
     background-color: #9C0000;
     color: #ffffff;
 }
-
+.nav_thongtin {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 2px solid red;
+    background-color: bisque;
+    font-size: 120%;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    padding-left: 8px;
+    color: brown;
+}
+.nav_content_thongtin {
+    margin-top: 26px;
+    margin-left: 20px;
+}
 /*archive-product*/
 body.post-type-archive-product {
     max-width: 1024px;
     margin: 190px auto;
 }
+
 body.post-type-archive-product .product.type-product {
     width: 75%;
     height: 200px;
     float: right;
 }
+
 body.post-type-archive-product .product.type-product img {
     width: 200px;
     height: 200px;
     float: left;
 }
+
 body.post-type-archive-product .product.type-product h2 {
     width: 100%;
     float: left;
@@ -444,6 +532,7 @@ body.post-type-archive-product .product.type-product h2 {
     color: #003C71;
     font-family: Arial, sans-serif;
 }
+
 body.post-type-archive-product .product.type-product .product-description {
     margin-top: 5px;
     width: 70%;
@@ -452,10 +541,12 @@ body.post-type-archive-product .product.type-product .product-description {
     border-bottom: 2px dotted #003C71;
     height: 40px;
 }
+
 body.post-type-archive-product aside {
     width: 20%;
     float: left;
 }
+
 body.post-type-archive-product .archive-cotent {
     width: 70%;
     float: left;
@@ -464,25 +555,30 @@ body.post-type-archive-product .archive-cotent {
     margin-left: 20px;
     margin-top: -13px;
 }
+
 body.post-type-archive-product .archive-cotent p {
     width: 55%;
     float: left;
 }
+
 body.post-type-archive-product .archive-cotent h4 {
     width: 40%;
     float: right;
     border-left: 1px dotted #003C71;
     padding: 1%;
 }
+
 body.page {
     max-width: 1024px;
     margin: 0 auto;
 }
+
 body.page aside {
     width: 20%;
     float: left;
     margin-top: 107px;
 }
+
 body.page .post {
     width: 75%;
     float: left;
@@ -490,21 +586,26 @@ body.page .post {
     margin-left: 12px;
     background-color: #ffffff;
 }
+
 body.single-product .product-thumb {
     width: 48%;
     float: left;
     margin-top: 12px;
 }
+
 body.single-product .product-info {
     width: 50%;
     float: right;
 }
+
 body.single-product p#breadcrumbs {
     margin-top: -72px;
 }
+
 body.archive p#breadcrumbs {
     margin-top: -73px;
 }
+
 body.single-product .order-button-single {
     clear: both;
     display: block;
@@ -520,23 +621,28 @@ body.single-product .order-button-single {
     width: 75px;
     background-color: #73C2F5;
 }
+
 body.single-product .post-info {
     clear: both;
     width: 100%;
     margin-top: 318px;
 }
+
 body.archive.tax-product-category {
     max-width: 1024px;
     margin: 80px auto;
 }
+
 body.archive.tax-product-category aside {
     width: 20%;
     margin-top: 20px;
     margin-left: 19px;
 }
-body.archive.tax-product-category p#breadcrumbs{
+
+body.archive.tax-product-category p#breadcrumbs {
     margin-top: 122px;
 }
+
 body.archive.tax-product-category .post_archive {
     display: block;
     width: 70%;
@@ -544,39 +650,47 @@ body.archive.tax-product-category .post_archive {
     overflow: hidden;
     margin-top: -469px;
 }
+
 body.archive.tax-product-category .type-product {
     width: 100%;
     height: auto;
 }
-body.archive.tax-product-category .type-product  img {
+
+body.archive.tax-product-category .type-product img {
     width: 48%;
     float: left;
 }
+
 body.archive.tax-product-category .type-product h2, body.archive.tax-product-category .type-product .product-description, body.archive.tax-product-category .type-product .archive-cotent {
     width: 50%;
     float: left;
     padding-left: 5px;
     margin-top: 10px;
 }
+
 body.archive.tax-product-category .type-product h2 {
     font-size: 180%;
     font-weight: bold;
     font-family: sans-serif;
     color: #46639E;
 }
+
 body.archive.tax-product-category h2.empty {
     display: block;
     width: 70%;
     float: right;
     margin-top: -437px;
 }
+
 body.archive .archive-info .product-kichthuoc, body.archive .archive-info .product-dientich, body.archive .archive-info .product-sotam {
     color: #008000;
 }
+
 .archive-info {
     width: 70%;
     float: right;
 }
+
 #footer {
     clear: both;
     text-align: center;
@@ -586,32 +700,39 @@ body.archive .archive-info .product-kichthuoc, body.archive .archive-info .produ
     margin: 10px auto;
 
 }
+
 .inner-footer {
     max-width: 1200px;
     overflow: hidden;
     margin: 0 auto;
 }
+
 .footer1 {
     display: inline-block;
     width: 50%;
     float: left;
     margin-top: 20px;
 }
+
 .footer1 h3 {
     color: black;
     font-weight: 300;
     font-family: Arial, sans-serif;
 }
+
 .social {
     list-style-type: none;
 }
+
 .social li img {
     width: 40px;
     height: 40px;
 }
+
 .social li {
     display: inline-block;
 }
+
 .footer2 {
     width: 50%;
     height: 230px;
@@ -619,28 +740,32 @@ body.archive .archive-info .product-kichthuoc, body.archive .archive-info .produ
     margin-top: 20px;
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
     h1 {
-        font-size: 180% ;
+        font-size: 180%;
         font-weight: 700;
         font-family: Arial, sans-serif;
     }
+
     h3 {
         font-size: 150%;
         font-weight: 500;
         font-family: Arial, sans-serif;
     }
+
     h4 {
         font-family: sans-serif, Arial;
         font-size: 120%;
         font-weight: 400;
         color: red;
     }
+
     body {
         width: 100%;
         margin: 0 auto;
         background-color: #ECF0F5;
     }
+
     p#breadcrumbs {
         display: none;
     }
@@ -653,7 +778,7 @@ body.archive .archive-info .product-kichthuoc, body.archive .archive-info .produ
 
     }
 
-    #logo{
+    #logo {
         width: 166px;
         height: 43px;
         background: url('images/logo_sanlinh_mobile.png') center no-repeat;
@@ -661,27 +786,31 @@ body.archive .archive-info .product-kichthuoc, body.archive .archive-info .produ
         margin-left: 10px;
     }
 
-    nav{
+    nav {
         float: right;
         height: 50px;
         line-height: 50px;
     }
+
     nav ul {
         display: none;
     }
-    #menu-icon{
+
+    #menu-icon {
         display: inline-block;
         float: right;
         padding: 10px 15px 0px 0px;
     }
+
     nav:hover ul {
         display: block;
         position: absolute;
         width: 100%;
-        top:  50px;
+        top: 50px;
         left: 0px;
         background-color: #46639E;
     }
+
     nav ul li {
         width: 100%;
         float: left;
@@ -692,9 +821,11 @@ body.archive .archive-info .product-kichthuoc, body.archive .archive-info .produ
     .banner {
         margin-top: -101px;
     }
+
     .content {
         margin-top: 23px;
     }
+
     .inner-title h1 {
         padding-left: 2%;
     }
@@ -702,14 +833,17 @@ body.archive .archive-info .product-kichthuoc, body.archive .archive-info .produ
     .post {
         width: 100%;
     }
+
     .product {
         width: 95%;
         height: auto;
     }
+
     .product img {
         width: 100%;
         height: auto;
     }
+
     .product h3 {
         font-size: 150%;
         width: 100%;
@@ -717,10 +851,12 @@ body.archive .archive-info .product-kichthuoc, body.archive .archive-info .produ
         color: #73C2F5;
         float: left;
     }
+
     .product p {
         color: #6C4E58;
 
     }
+
     .product h4 {
         font-size: 180%;
         width: 100%;
@@ -732,6 +868,7 @@ body.archive .archive-info .product-kichthuoc, body.archive .archive-info .produ
     .content_1 {
         width: 100%;
     }
+
     .inner_title_1 {
         display: inline-block;
         width: 100%;
@@ -748,10 +885,11 @@ body.archive .archive-info .product-kichthuoc, body.archive .archive-info .produ
         padding-left: 2%;
     }
 
-    .product-footer{
+    .product-footer {
         width: 100%;
         height: auto;
     }
+
     .product-footer img {
         width: 100%;
         height: auto;
@@ -761,10 +899,12 @@ body.archive .archive-info .product-kichthuoc, body.archive .archive-info .produ
         width: 100%;
         height: auto;
     }
+
     .product_1 {
         width: 100%;
         height: auto;
     }
+
     .product_1 img {
         width: 100%;
         height: auto;
@@ -774,48 +914,57 @@ body.archive .archive-info .product-kichthuoc, body.archive .archive-info .produ
         width: 90%;
         margin: 89px auto;
     }
+
     body.single header {
         height: 50px;
     }
+
     body.single #text-2 {
         width: 100%;
         margin: 0 auto;
     }
+
     body.single #text-4 {
         display: none;
     }
+
     body.single aside {
         width: 100%;
         margin: 0 auto;
     }
+
     body.single section.chitiet-sanpham {
         width: 100%;
         margin-top: 15px;
         background-color: #ffffff;
     }
+
     body.single .product-thumb {
         margin-top: 20px;
     }
+
     body.single-product .product-thumb {
         width: 46%;
     }
-    body.single .product-info  {
+
+    body.single .product-info {
         margin-left: 20px;
         width: 47%;
 
     }
 
-    body.single .order-button-single{
+    body.single .order-button-single {
         margin-top: 2px;
     }
+
     body.single .post-info {
         width: 100%;
     }
 
-
     body.post-type-archive-product {
         width: 100%;
     }
+
     body.post-type-archive-product header {
         position: fixed;
         top: 0;
@@ -827,25 +976,29 @@ body.archive .archive-info .product-kichthuoc, body.archive .archive-info .produ
         height: 460px;
         margin: -122px auto;
     }
+
     body.post-type-archive-product #text-4 {
         display: none;
     }
+
     body.post-type-archive-product .product.type-product {
         width: 100%;
         height: auto;
         margin-top: 23px;
     }
 
-    body.post-type-archive-product .product.type-product h2, body.post-type-archive-product .product.type-product .product-description, body.post-type-archive-product .product.type-product .archive-cotent{
+    body.post-type-archive-product .product.type-product h2, body.post-type-archive-product .product.type-product .product-description, body.post-type-archive-product .product.type-product .archive-cotent {
         width: 62%;
         float: left;
         border: 0;
     }
+
     body.post-type-archive-product .product.type-product .archive-cotent {
         clear: both;
         height: auto;
     }
-    body.post-type-archive-product .product.type-product .archive-cotent p,  body.post-type-archive-product .product.type-product .archive-cotent h4 {
+
+    body.post-type-archive-product .product.type-product .archive-cotent p, body.post-type-archive-product .product.type-product .archive-cotent h4 {
         width: 100%;
         border: 0;
     }
@@ -854,37 +1007,45 @@ body.archive .archive-info .product-kichthuoc, body.archive .archive-info .produ
         width: 100%;
         margin: 0 auto;
     }
+
     body.page aside {
         width: 100%;
         margin-top: 60px;
     }
+
     body.page #text-4 {
         display: none;
     }
+
     body.page .post {
         width: 100%;
         float: left;
         margin-top: 84px;
         background-color: #ffffff;
     }
+
     body.tax-product-category header {
         position: fixed;
         top: 0;
         left: 0;
     }
+
     body.tax-product-category aside {
         width: 90%;
         margin: -70px auto;
     }
+
     body.tax-product-category aside #text-4 {
         display: none;
     }
+
     body.tax-product-category .post_archive {
         clear: both;
         width: 100%;
         margin: 100px auto;
-        padding-left:  1%;
+        padding-left: 1%;
     }
+
     #footer, .inner-footer {
         text-align: center;
         width: 100%;
